@@ -439,7 +439,8 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
   }
 
   Widget _searchField() {
-    return Column(
+    return 
+    Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -453,13 +454,18 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
                   SingleActivator(LogicalKeyboardKey.space): DoNothingAndStopPropagationTextIntent(),
                 },
                 child: TextField(
+                   decoration: InputDecoration(
+    prefixIcon: Icon(Icons.search),
+    hintText: "Search",
+     border: InputBorder.none,
+     ),
                   enableIMEPersonalizedLearning: widget.popupProps.searchFieldProps.enableIMEPersonalizedLearning,
                   clipBehavior: widget.popupProps.searchFieldProps.clipBehavior,
                   style: widget.popupProps.searchFieldProps.style,
                   controller: searchBoxController,
                   focusNode: widget.popupProps.searchFieldProps.focusNode,
                   autofocus: widget.popupProps.searchFieldProps.autofocus,
-                  decoration: widget.popupProps.searchFieldProps.decoration,
+               //  decoration: widget.popupProps.searchFieldProps.decoration,
                   keyboardType: widget.popupProps.searchFieldProps.keyboardType,
                   textInputAction: widget.popupProps.searchFieldProps.textInputAction,
                   textCapitalization: widget.popupProps.searchFieldProps.textCapitalization,

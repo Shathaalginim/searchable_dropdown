@@ -322,10 +322,10 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
               onPressed: () {
                 removeItem(item);
               },
-              child: Icon(
-                Icons.close_outlined,
-                size: 20,
-              ),
+              // child: Icon(
+              //   Icons.close_outlined,
+              //   size: 20,
+              // ),
             )
           ],
         ),
@@ -436,7 +436,7 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
         .applyDefaults(Theme.of(state.context).inputDecorationTheme)
         .copyWith(
           enabled: widget.enabled,
-          suffixIcon: _manageSuffixIcons(),
+         // suffixIcon: _manageSuffixIcons(),
           errorText: state.errorText,
         );
   }
